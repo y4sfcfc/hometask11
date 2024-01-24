@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net.NetworkInformation;
+using System.Runtime.Intrinsics.X86;
 
 namespace C_VariableTask1
 {
@@ -9,6 +10,7 @@ namespace C_VariableTask1
         {
             string ad, soyad, atadi, cinsiyyet, unvan, mw, dovr, accrej;
 
+            mw = ""; dovr = ""; accrej = "";
 
             Console.Write("Adinizi daxil edin:");
             ad = Console.ReadLine();
@@ -35,37 +37,57 @@ namespace C_VariableTask1
             int yash = DateTime.Now.Year - dogumtarix;
 
 
-            if (yash < 11)
+            if (yash > 65)
             {
-                dovr = "uşaqlıq";
+                dovr = "qocaliq";
+            }
+            else if (yash > 35)
+            {
+                dovr = "orta yash dovru";
+            }
+            else if (yash > 18)
+            {
+                dovr = "genclik";
+            }
+            else if (yash > 16)
+            {
+                dovr = "erken genclik";
+            }
+            else if (yash > 11)
+            {
+                dovr = "yeniyetmelik";
             }
             else if (11 < yash)
             {
-                dovr = "yeniyetməlik";
-            }
-            else if (16 < yash)
-            {
-                dovr = "erkən gənclik";
-            }
-            else if (18 < yash)
-            {
-                dovr = "gənclik";
-            }
-            else if (35 < yash)
-            {
-                dovr = "erkən gənclik";
-            }
-            else if (65 < yash)
-            {
-                dovr = "qocalıq";
+                dovr = "ushaqliq";
             }
             
             
-            if (dovr == "gənclik")
-            {
-                accrej = "qeydə alınmışdır";
-            }
             
+            if (dovr == "genclik")
+            {
+                accrej = "qeyde alinmishdir";
+            }
+            else if (dovr == "ushaqliq")
+            {
+                accrej = "qeyde alinmamishdir";
+            }
+            else if (dovr == "yeniyetmelik")
+            {
+                accrej = "qeyde alinmamishdir";
+            }
+            else if (dovr == "erken genclik")
+            {
+                accrej = "qeyde alinmamishdir";
+            }
+            else if (dovr == "orta yash dovru")
+            {
+                accrej = "qeyde alinmamishdir";
+            }
+            else if (dovr == "qocaliq")
+            {
+                accrej = "qeyde alinmamishdir";
+            }
 
             Console.Write("Unvanı daxil edin:");
             unvan = Console.ReadLine();
@@ -73,8 +95,8 @@ namespace C_VariableTask1
 
 
 
-            Console.WriteLine("Siz" + soyad + ad + atadi + mw + dogumtarix + "doğulduğunuz üçün hal-hazırda" + yash + "yaşınız vardır. Azərbaycan qanunvericiliyinə uyğun olaraq" + dovr + "dövrünüzü yaşamaqdasınız. Bu iş yerinə sadəcə gənclik dönəmində olan şəxslər müraciət edə bilərlər. Bu tələbi nəzərə alaraq sizin müraciətiniz" + accrej + ".");
-            Console.ReadLine();
+            Console.WriteLine("Siz " + soyad + " " + ad + " " + atadi + " " + mw + " " + dogumtarix + " -ci ilde dogulduğunuz ücün hal-hazırda " + yash + " yasınız vardır. Azerbaycan qanunvericiliyine uygun olaraq " + dovr + " dovrunuzu yasamaqdasınız. Bu is yerine sadece genclik döneminde olan sexsler muraciet ede bilerler. Bu telebi nezere alaraq sizin müracietiniz " + accrej + ".");
+            
 
 
         }
