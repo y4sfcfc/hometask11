@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "C#VariableTask1/1.0.0": {
+        "runtime": {
+          "C#VariableTask1.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "C#VariableTask1/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
