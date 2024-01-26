@@ -68,23 +68,7 @@ namespace C_VariableTask1
             {
                 accrej = "qeyde alinmishdir";
             }
-            else if (dovr == "ushaqliq")
-            {
-                accrej = "qeyde alinmamishdir";
-            }
-            else if (dovr == "yeniyetmelik")
-            {
-                accrej = "qeyde alinmamishdir";
-            }
-            else if (dovr == "erken genclik")
-            {
-                accrej = "qeyde alinmamishdir";
-            }
-            else if (dovr == "orta yash dovru")
-            {
-                accrej = "qeyde alinmamishdir";
-            }
-            else if (dovr == "qocaliq")
+           else
             {
                 accrej = "qeyde alinmamishdir";
             }
